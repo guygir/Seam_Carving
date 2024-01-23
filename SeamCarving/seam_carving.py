@@ -18,12 +18,7 @@ def resize(image: NDArray, out_height: int, out_width: int, forward_implementati
             where img1 is the resized image and img2/img3 are the visualization images
             (where the chosen seams are colored red and black for vertical and horizontal seams, respecitvely).
     """
-    # TODO: return { 'resized' : img1, 'vertical_seams' : img2 ,'horizontal_seams' : img3}
-    ## WHAT ABOUT NEAREST NEIGHBOURS
-    #basic imp + TOO NAIVE
-    ##WHEN DO I NEED TO NORMALIZE?
     numpyImage=image
-    ## I NEED TO DO image=GRAYSCALE HWO DOES THIS EVEN WORK WITHOUT IT>>???
     heightDelta=image.shape[0]-out_height
     widthDelta=image.shape[1]-out_width
     smallerWidthFlag=(widthDelta>0)
